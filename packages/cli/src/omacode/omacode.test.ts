@@ -4,7 +4,7 @@ import { JEPAWorldModel } from './jepa-world-model'
 import { AuditorJudge } from './auditor-judge'
 import { HardwarePacer } from './hardware-pacing'
 import { OmaCodeEngine } from './actor-auditor-loop'
-import { CandidateAction } from './types'
+import {  type CandidateAction } from './types'
 
 describe('OmaCode Subsystems', () => {
   describe('CLMVerifier (Contrastive-LM InfoNCE)', () => {

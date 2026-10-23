@@ -6,7 +6,7 @@
  * - Protects against stream saturation, runaway tool loops, and process pipe stalls.
  */
 
-import { HardwarePacerConfig } from './types'
+import {  type HardwarePacerConfig } from './types'
 
 export class HardwarePacer {
   private config: HardwarePacerConfig

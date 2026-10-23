@@ -9,7 +9,7 @@
  * - Preempts catastrophic drift and high-risk operations before execution.
  */
 
-import { CandidateAction, JEPALatentVector, JEPAStatePrediction } from './types'
+import {  type CandidateAction,  type JEPALatentVector,  type JEPAStatePrediction } from './types'
 
 export class JEPAWorldModel {
   private latentDimensions: number = 64

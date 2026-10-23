@@ -11,7 +11,7 @@
 import fs from 'fs'
 import path from 'path'
 import { execSync } from 'child_process'
-import { CoWSandboxState } from './types'
+import {  type CoWSandboxState } from './types'
 
 export class CoWSandboxManager {
   private baseDir: string

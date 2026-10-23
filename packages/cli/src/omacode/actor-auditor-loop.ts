@@ -15,11 +15,11 @@ import { CoWSandboxManager } from './cow-sandbox'
 import { AuditorJudge } from './auditor-judge'
 import { HardwarePacer } from './hardware-pacing'
 import {
-  CandidateAction,
-  JEPAStatePrediction,
-  CLMRankResult,
-  AuditProof,
-  OmaCodeExecutionReport
+   type CandidateAction,
+   type JEPAStatePrediction,
+   type CLMRankResult,
+   type AuditProof,
+   type OmaCodeExecutionReport
 } from './types'
 
 export interface OmaCodeConfig {
@@ -174,7 +174,7 @@ export class OmaCodeEngine {
 
       // Step 8: Commit or Trash CoW Overlay
       if (proof.status === 'VERIFIED') {
-        const merged = this.cow.commitVerified(sandbox, proof.signature)
+        this.cow.commitVerified(sandbox, proof.signature)
         onStep?.({
           turn,
           phase: 'MERGE',

@@ -8,7 +8,7 @@
  * - Anti-pattern & hard negative suppression for SWE coding agents.
  */
 
-import { CandidateAction, CLMScore, CLMRankResult } from './types'
+import {  type CandidateAction,  type CLMScore,  type CLMRankResult } from './types'
 
 export class CLMVerifier {
   private temperature: number = 0.07 // Standard InfoNCE temperature

@@ -10,16 +10,15 @@
  */
 
 import {
-  ProcessControlBlock,
-  ProcessState,
+   type ProcessControlBlock,
   Capability,
   SyscallCode,
-  SyscallResult,
-  KernelLogEntry,
-  IPCMessage
+   type SyscallResult,
+   type KernelLogEntry,
+   type IPCMessage
 } from './types'
-import { JEPAMMU, JEPAPageFaultException } from './jepa-mmu'
-import { LocalModelDriver, LLMDeviceStatus } from './local-model-driver'
+import { JEPAMMU } from './jepa-mmu'
+import { LocalModelDriver,  type LLMDeviceStatus } from './local-model-driver'
 
 export class AgenticLinuxKernel {
   private processTable: Map<number, ProcessControlBlock> = new Map()

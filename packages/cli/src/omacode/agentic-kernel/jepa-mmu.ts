@@ -7,7 +7,7 @@
  * - Traps unsafe transitions with JEPA_PAGE_FAULT before environment execution.
  */
 
-import { ProcessControlBlock, SyscallCode } from './types'
+import {  type ProcessControlBlock, SyscallCode } from './types'
 
 export class JEPAPageFaultException extends Error {
   public energyScore: number

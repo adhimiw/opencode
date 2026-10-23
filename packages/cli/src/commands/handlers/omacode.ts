@@ -1,7 +1,7 @@
 import { Effect, Option } from "effect"
 import { Commands } from "../commands"
 import { Runtime } from "../../framework/runtime"
-import { runOmaCodeCli } from "../omacode/cli"
+import { runOmaCodeCli } from "../../omacode/cli"
 
 const handler = Effect.fn("cli.omacode")(function* (input: Runtime.Input<typeof Commands.commands.omacode>) {
   const action = Option.getOrUndefined(input.action) ?? "info"

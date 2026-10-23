@@ -14,7 +14,7 @@ import { OmaCodeEngine } from './actor-auditor-loop'
 import { AuditorJudge } from './auditor-judge'
 import { CLMVerifier } from './clm-verifier'
 import { JEPAWorldModel } from './jepa-world-model'
-import { CandidateAction } from './types'
+import {  type CandidateAction } from './types'
 
 const OMACODE_BANNER = `
 \x1b[36m  ██████╗ ███╗   ███╗ █████╗  ██████╗ ██████╗ ██████╗ ███████╗\x1b[0m

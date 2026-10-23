@@ -12,7 +12,7 @@ import { execSync } from 'child_process'
 import crypto from 'crypto'
 import fs from 'fs'
 import path from 'path'
-import { AuditProof, AuditStatus, SensoryEvidence } from './types'
+import {  type AuditProof,  type AuditStatus,  type SensoryEvidence } from './types'
 
 export class AuditorJudge {
   private workspaceRoot: string

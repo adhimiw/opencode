@@ -4,7 +4,7 @@ import { AuditorJudge } from './auditor-judge'
 import { CLMVerifier } from './clm-verifier'
 import { JEPAWorldModel } from './jepa-world-model'
 import { AgenticLinuxKernel } from './agentic-kernel/kernel'
-import { CandidateAction } from './types'
+import {  type CandidateAction } from './types'
 
 export class OmaCodeTui {
   private workspaceDir: string
