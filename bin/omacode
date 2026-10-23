@@ -1,5 +1,5 @@
 #!/usr/bin/env bun
-import { runOmaCodeCli } from "../packages/opencode/src/omacode/cli"
+import { runOmaCodeCli } from "../packages/cli/src/omacode/cli"
 
 runOmaCodeCli(process.argv.slice(2)).catch((err) => {
   console.error(err)
