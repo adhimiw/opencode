@@ -1,0 +1,7 @@
+#!/usr/bin/env bun
+import { runOmaCodeCli } from "../packages/opencode/src/omacode/cli"
+
+runOmaCodeCli(process.argv.slice(2)).catch((err) => {
+  console.error(err)
+  process.exit(1)
+})

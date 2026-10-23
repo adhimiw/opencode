@@ -216,6 +216,39 @@ const layer = Layer.effect(
             mode: "subagent",
             native: true,
           },
+          actor: {
+            name: "actor",
+            description: "OmaCode Actor Agent: Drives aggressive execution, edits, and tool calls in an ephemeral Copy-on-Write (CoW) sandbox. Forbidden from self-certifying completion.",
+            permission: Permission.merge(
+              defaults,
+              Permission.fromConfig({
+                "*": "allow",
+                question: "allow",
+              }),
+              user,
+            ),
+            options: {},
+            mode: "all",
+            native: true,
+          },
+          auditor: {
+            name: "auditor",
+            description: "OmaCode Auditor Agent: Orthogonal sensory judge that verifies real-world truth (test execution, compiler diagnostics, AST, diffs) and issues cryptographic AuditProofs. Has ZERO write permissions.",
+            permission: Permission.merge(
+              defaults,
+              Permission.fromConfig({
+                "*": "deny",
+                grep: "allow",
+                glob: "allow",
+                read: "allow",
+                bash: "allow",
+              }),
+              user,
+            ),
+            options: {},
+            mode: "all",
+            native: true,
+          },
           compaction: {
             name: "compaction",
             mode: "primary",
